@@ -53,7 +53,7 @@ body {
 }
 .logo:hover {
     transform: scale(1.1);
-    transition: transform 0.3s ease-in-out; /* Added smooth transition for hover effect */
+    transition: transform 0.3s ease-in-out; 
 }
 
 span {
@@ -77,13 +77,15 @@ span {
     border-bottom: 3px solid var(--hover-color); 
     border-bottom: 3px solid transparent;
 }
-.gradient-btn {
+
+
+.gradient-btn,.btn{
     font-size: 1.8rem;
     padding: 1rem 2rem; /* Fixed spacing issue */
     border-radius: 3rem;
     background: linear-gradient(270deg, var( #ea580c) 10%, var(--hover-color) 100%);
     letter-spacing: 1px;
-    cursor: pointer;
+    cursor:pointer;
     transition: 0.3s ease-in-out;
     color: var(--text-color);
     border: none;
@@ -94,6 +96,20 @@ span {
     background: linear-gradient(270deg, var(--hover-color) 10%, var(--main-color) 100%);
     color: var(--bg-color);
 }
+.fas.fa-download {
+    font-size: 2rem;
+    color: #4CAF50; /* Green color */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.fas.fa-download:hover {
+    color: #45a049; /* Slightly darker green on hover */
+}
+
+
+
+
 /*Home Section*/
 
 section{
@@ -113,37 +129,46 @@ padding:10 rem 15%;
     text-align:right;
 }
 
-home-content h1{
-    font-size:8rem;
-    font-weight: 700;
+.home-content h1{
+    font-size:2rem;
+    font-weight: 100;
     margin-top: 1.5rem;
     line-height:1;
+    
 
 }
+
+
+
 .home-content h3{
     margin:1rem 0;
-    font-size:4rem;
+    font-size:2rem;
 }
 
 .home-content p{
     font-size:1.5rem;
     font-weight:500;
+    padding:5px;
+    margin-left: 20px;
+    margin-right:20px;
     line-height: 1.8;
+      text-align: justify;
 }
 
 .home-img img {
     width: 32vw;
-    border-radius: 50%;
+   
+    border-radius: 40%;
     box-shadow: 0 0 25px #f5deb3; /* Light golden color */
     transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
 .home-img img:hover {
-    transform: scale(1.1) rotate(5deg); /* Slight zoom-in and rotation */
-    box-shadow: 0 0 30px #f5deb3, /* Bright glow */
+    transform: scale(1.1) rotate(5deg); 
+    box-shadow: 0 0 30px #f5deb3,
                 0 0 60px #f5deb3, 
-                0 0 90px #faebd7; /* Antique white for elegant glow */
-    filter: brightness(1.2); /* Slight brightness increase */
+                0 0 90px #faebd7; 
+    filter: brightness(1.2); 
 }
 
 
@@ -174,7 +199,7 @@ box-shadow:0 0 25px var(--main-color);
 
 .btn-group{
     display:flex;
-    padding:1rem 3rem;
+    padding:3rem 6rem;
     background-color: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
     border-radius: 3rem;
@@ -395,15 +420,15 @@ box-shadow:0 0 25px var(--main-color);
 }
 
 .projects-box {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    place-items: center;
+    display: flex; /* Use flexbox for row layout */
+    flex-wrap: wrap; /* Allows wrapping to the next line */
+    justify-content: space-evenly; /* Ensures cards are spaced out evenly */
     gap: 3rem;
     row-gap: 5rem;
 }
 
 .projects-card {
-    display:flexbox;
+    display: flex; /* Corrected from 'flexbox' to 'flex' */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -412,36 +437,34 @@ box-shadow:0 0 25px var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 3rem;
     gap: 1rem;
-    padding: 5rem 2rem; /* Ensures proper spacing */
+    padding: 5rem 2rem;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 0 5px var(--main-color);
-    transition: transform 0.3s ease; /* Adds smooth hover effect */
+    transition: transform 0.3s ease;
     width: 500px;
-    height:600px;
-
-
+    height: 600px;
 }
 
 .projects-card:hover {
-    box-shadow: 0 0 25px var(--main-color), 
-                0 0 50px var(--main-color); /* Corrected syntax with `var()` */
-    transform: scale(1.02); /* Slight scaling effect on hover */
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+    transform: scale(1.02);
 }
 
 .projects-card img {
     max-width: 300px;
     border-radius: 2rem;
-    object-fit: cover; /* Maintains aspect ratio */
+    object-fit: cover;
 }
 
 .projects-card h3 {
-    font-size: 3rem; /* Adjusted for readability */
+    font-size: 3rem;
 }
 
 .projects-card p {
-    font-size: 1.6rem; /* Fixed typo for font size */
-    display:flex;
+    font-size: 1.6rem;
+    display: flex;
     text-align: justify;
 }
 
@@ -498,7 +521,7 @@ box-shadow:0 0 25px var(--main-color);
 }
 
 .footer ul li a{
-    color:white;
+    color:black;
     border-bottom: 3px solid transparent;
     transition: 0.3s ease-in-out;
 }
